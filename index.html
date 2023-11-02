@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Cumbia Tu Mare</title>
@@ -12,154 +12,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
 
-  <style>
-  body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
-  }
-  h3, h4 {
-    margin: 10px 0 30px 0;
-    letter-spacing: 10px;      
-    font-size: 20px;
-    color: #111;
-  }
-  .container {
-    padding: 80px 120px;
-  }
-  .person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-  }
-  .person:hover {
-    border-color: #f1f1f1;
-  }
-  .carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */ 
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-  }
-  .carousel-caption h3 {
-    color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  .bg-1 {
-    background: #2d2d30;
-    color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-  .list-group-item:first-child {
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-  }
-  .list-group-item:last-child {
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-  .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 15px;
-    height: 400px;
-  }
-  .thumbnail p {
-    margin-top: 15px;
-    color: #555;
-  }
-  .thumbnail img {
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-  }
-  .btn {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
-    border-radius: 0;
-    transition: .2s;
-  }
-  .btn:hover, .btn:focus {
-    border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
-  }
-  .modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-header, .modal-body {
-    padding: 40px 50px;
-  }
-  .nav-tabs li a {
-    color: #777;
-  }
-  #googleMap {
-    width: 100%;
-    height: 400px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }  
-  .navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 4px;
-    opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  .open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-    color: #000 !important;
-  }
-  .dropdown-menu li a:hover {
-    background-color: red !important;
-  }
-  footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 32px;
-  }
-  footer a {
-    color: #f5f5f5;
-  }
-  footer a:hover {
-    color: #777;
-    text-decoration: none;
-  }  
-  .form-control {
-    border-radius: 0;
-  }
-  textarea {
-    resize: none;
-  }
-  </style>
+  <!-- multi-language support -->
+  <script src="js/CLDRPluralRuleParser.js"></script>
+  <script src="js/jquery.i18n.js"></script>
+  <script src="js/jquery.i18n.messagestore.js"></script>
+  <script src="js/jquery.i18n.fallbacks.js"></script>
+  <script src="js/jquery.i18n.language.js"></script>
+  <script src="js/jquery.i18n.parser.js"></script>
+  <script src="js/jquery.i18n.emitter.js"></script>
+  <script src="js/jquery.i18n.emitter.bidi.js"></script>
+
+  <script src="js/translations.js"></script>
 </head>
 <body id="site" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -175,10 +40,19 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#site">INICIO</a></li>
-        <li><a href="#band">LA BANDA</a></li>
-        <li><a href="#tour">FECHAS</a></li>
-        <li><a href="#contact">CONTACTO</a></li>
+        <li><a href="#site" data-i18n="nav-link-home">INICIO</a></li>
+        <li><a href="#band" data-i18n="nav-link-band">LA BANDA</a></li>
+        <li><a href="#tour" data-i18n="nav-link-dates">FECHAS</a></li>
+        <li><a href="#contact" data-i18n="nav-link-contact">CONTACTO</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="set_locale_to('en')">English</a></li>
+            <li><a href="#" onclick="set_locale_to('es')">Español</a></li>
+            <li><a href="#" onclick="set_locale_to('de')">Deutsch</a></li>
+          </ul>
+        </li>
+        
         <!--
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
@@ -254,77 +128,76 @@
 
 <!-- Container (The Band Section) -->
 <div id="band" class="container text-center">
-  <h3>LA BANDA</h3>
-  <p>Formada en el año 2022, Cumbia Tu Mare nació de la unión de varios amigos latinos con una pasión compartida por la música. Desde entonces, hemos recorrido un emocionante camino, atrayendo talentosos músicos de diversas nacionalidades y creando una combinación única de estilos y sabores musicales.</p>
-  <p>Haciendo click en nuestros nombres podés descubrir un poco más sobre nosotros.</p>
+  <h3 data-i18n="nav-link-band">LA BANDA</h3>
+  <p data-i18n="band-intro">Formada en el año 2022, Cumbia Tu Mare nació de la unión de varios amigos latinos con una pasión compartida por la música. Desde entonces, hemos recorrido un emocionante camino, atrayendo talentosos músicos de diversas nacionalidades y creando una combinación única de estilos y sabores musicales.</p>
+  <p data-i18n="band-intro-1">Haciendo click en nuestros nombres podés descubrir un poco más sobre nosotros.</p>
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <h2 class="text-center"><strong>Edgar</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-edgar-name"><strong>Edgar</strong></h2>
       <a href="#edgar" data-toggle="collapse">
         <img src="docs/assets/edgar.jpg" class="img-circle person" alt="Edgar" width="255" height="255">
       </a>
       <div id="edgar" class="collapse">
-        <p>Percusionista y Vocalista</p>
-        <p>El que todo lo puede</p>
+        <p data-i18n="band-member-edgar-role">Percusionista y Vocalista</p>
+        <p data-i18n="band-member-edgar-description">El que todo lo puede</p>
         <h3>🇨🇴</h3>
       </div>
     </div>
     <div class="col-sm-4">
-      <h2 class="text-center"><strong>Mauricio</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-mauricio-name"><strong>Mauricio</strong></h2>
       <a href="#mauricio" data-toggle="collapse">
         <img src="docs/assets/mauricio.jpg" class="img-circle person" alt="Mauricio" width="255" height="255">
       </a>
       <div id="mauricio" class="collapse">
-        <p>Guitarrista y Vocalista</p>
-        <p>El chileno ql</p>
+        <p data-i18n="band-member-mauricio-role">Guitarrista y Vocalista</p>
+        <p data-i18n="band-member-mauricio-description">El chileno ql</p>
         <h3>🇨🇱</h3>
       </div>
     </div>
     <div class="col-sm-4">
-      <h2 class="text-center"><strong>Juani</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-juani-name"><strong>Juani</strong></h2>
       <a href="#juani" data-toggle="collapse">
         <img src="docs/assets/juani.jpg" class="img-circle person" alt="Juani" width="255" height="255">
       </a>
       <div id="juani" class="collapse">
-        <p>Bajista</p>
-        <p>Aguante el Diego</p>
+        <p data-i18n="band-member-juani-role">Bajista</p>
+        <p data-i18n="band-member-juani-description">Aguante el Diego</p>
         <h3>🇦🇷</h3>
       </div>
     </div>
   </div>
-  
   <div class="row">
     <div class="col-sm-4">
-      <h2 class="text-center"><strong>Saúl</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-saul-name"><strong>Saúl</strong></h2>
       <a href="#saul" data-toggle="collapse">
         <img src="docs/assets/saul.jpg" class="img-circle person" alt="Saúl" width="255" height="255">
       </a>
       <div id="saul" class="collapse">
-        <p>Guitarrista y violinista</p>
-        <p>El que tira magia en las cuerdas</p>
+        <p data-i18n="band-member-saul-role">Guitarrista y violinista</p>
+        <p data-i18n="band-member-saul-description">El que tira magia en las cuerdas</p>
         <h3>🇪🇨</h3>
       </div>
     </div>
     <div class="col-sm-4">
-      <h2 class="text-center"><strong>Lucho</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-lucho-name"><strong>Lucho</strong></h2>
       <a href="#lucho" data-toggle="collapse">
         <img src="docs/assets/lucho.jpg" class="img-circle person" alt="Lucho" width="255" height="255">
       </a>
       <div id="lucho" class="collapse">
-        <p>Percusionista</p>
-        <p>El que hace cantar a las congas</p>
+        <p data-i18n="band-member-lucho-role">Percusionista</p>
+        <p data-i18n="band-member-lucho-description">El que hace cantar a las congas</p>
         <h3>🇳🇮</h3>
       </div>
     </div>
     <div class="col-sm-4">
-      <h2 class="text-center"><strong>Martin</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-martin-name"><strong>Martin</strong></h2>
       <a href="#martin" data-toggle="collapse">
         <img src="docs/assets/martin.jpg" class="img-circle person" alt="Martin" width="255" height="255">
       </a>
       <div id="martin" class="collapse">
-        <p>Baterista</p>
-        <p>El metrónomo de la banda</p>
+        <p data-i18n="band-member-martin-role">Baterista</p>
+        <p data-i18n="band-member-martin-description">El metrónomo de la banda</p>
         <h3>🇩🇪</h3>
       </div>
     </div>
@@ -332,62 +205,63 @@
   
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
-      <h2 class="text-center"><strong>Simon</strong></h2>
+      <h2 class="text-center" data-i18n="band-member-simon-name"><strong>Simon</strong></h2>
       <a href="#simon" data-toggle="collapse">
         <img src="docs/assets/simon.jpg" class="img-circle person" alt="Simon" width="255" height="255">
       </a>
       <div id="simon" class="collapse">
-        <p>Tecladista</p>
-        <p>El que le pone el piripipí a la melodía</p>
+        <p data-i18n="band-member-simon-role">Tecladista</p>
+        <p data-i18n="band-member-simon-description">El que le pone el piripipí a la melodía</p>
         <h3>🇩🇪</h3>
       </div>
     </div>
-  </div>  
+  </div>
+  
 </div>
 
 <!-- Container (TOUR Section) -->
 <div id="tour" class="bg-1">
   <div class="container">
-    <h3 class="text-center">FECHAS</h3>
-    <p class="text-center">¡Vení a vernos en vivo!</p>
+    <h3 class="text-center" data-i18n="nav-link-dates">FECHAS</h3>
+    <p class="text-center" data-i18n="tour-cta">¡Vení a vernos en vivo!</p>
     <ul class="list-group">
-      <li class="list-group-item">Noviembre<span class="badge">3 fechas</span></li>
-      <li class="list-group-item">Diciembre</li> 
+      <li class="list-group-item"><span data-i18n="november">Noviembre</span><span class="badge">3</span></li>
+      <li class="list-group-item"><span data-i18n="december">Diciembre</span><span class="badge">0</span></li> 
     </ul>
     
     <div class="row text-center">
       <div class="col-md-4 col-sm-12">
         <div class="thumbnail">
           <img src="docs/assets/foto_albertshofen_1.jpg" alt="La Lucha" width="400" height="300">
-          <p><strong>Spardorf</strong></p>
-          <p>Taquería La Lucha</p>
-          <p>Jueves 02.11</p>
+          <p><strong data-i18n="tour-date-1-location">Spardorf</strong></p>
+          <p data-i18n="tour-date-1-event">Taquería La Lucha</p>
+          <p data-i18n="tour-date-1-date">Jueves 02.11</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="thumbnail">
           <img src="docs/assets/foto_albertshofen_2.jpg" alt="Fiesta de cumpleaños" width="400" height="300">
-          <p><strong>Bamberg</strong></p>
-          <p>Fiesta de cumpleaños <span class="label label-danger">privada</span></p>
-          <p>Viernes 03.11</p>
+          <p><strong data-i18n="tour-date-2-location">Bamberg</strong></p>
+          <p data-i18n="tour-date-2-event">Fiesta de cumpleaños privada</p>
+          <p data-i18n="tour-date-2-date">Viernes 03.11</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
         <div class="thumbnail">
           <img src="docs/assets/foto_wiese3.jpg" alt="Puma" width="400" height="300">
-          <p><strong>Herzogenaurach</strong></p>
-          <p>Puma <span class="label label-danger">privada</span></p>
-          <p>Jueves 09.11</p>
+          <p><strong data-i18n="tour-date-3-location">Herzogenaurach</strong></p>
+          <p data-i18n="tour-date-3-event">Fiesta privada en Puma</p>
+          <p data-i18n="tour-date-3-date">Jueves 09.11</p>
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container">
-  <h3 class="text-center">Contacto</h3>
-  <p class="text-center"><em>¿Querés que toquemos en tu fiesta? ¿Tenés alguna pregunta?</em></p>
+  <h3 class="text-center" data-i18n="nav-link-contact">Contacto</h3>
+  <p class="text-center" data-i18n="contact-intro"><em>¿Querés que toquemos en tu fiesta? ¿Tenés alguna pregunta?</em></p>
 
   <div class="row">
     <div class="col-md-4">
