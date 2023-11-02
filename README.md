@@ -2,6 +2,8 @@
 
 This README will guide you on how to make updates to the Cumbia Tu Mare website and add translations for different languages. You can also learn how to test the website locally before deploying any changes.
 
+Access the website at https://cumbiatuma.re/
+
 ## What do we need to do with this repo?
 
 It's important to keep the tour section (i.e the `<div id="tour>` element) up to date.
