@@ -36,6 +36,22 @@ Please add any photos under [docs/assets](docs/assets/) and reference them accor
 
 Remember to test locally that the photos look all right before pushing!
 
+### Converting JPG to WEBP
+
+We use webp instead of jpg because of the size of the images. If you've got a jpg photo, first install `cwebp`:
+
+```bash
+brew install webp
+```
+
+Put your photo in [docs/assets](docs/assets/) and run
+
+```bash
+bash converter.sh
+```
+
+This will convert all the `.jpg` files into `.webp`. Remember to remove the jpg files before committing your changes.
+
 ## Testing Locally Using Python's HTTP Server
 
 To test the website locally before deploying changes, you can use Python's built-in HTTP server. Here's how:
