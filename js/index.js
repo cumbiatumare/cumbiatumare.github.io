@@ -11,11 +11,8 @@ $(document).ready(function () {
     $(".tour-date").each(function () {
       var eventDate = $(this).data("event-date");
 
-      console.log("Event Date: " + eventDate);
-
       if (eventDate < today) {
         // Add a class to gray out the card
-        console.log("Gray out event Date: " + eventDate);
         $(this).addClass("grayed");
       }
     });
@@ -32,7 +29,6 @@ $(document).ready(function () {
       return eventMonth === targetMonth;
     }).length;
 
-    console.log("Month Count: " + monthCount);
     // Update the badge number
     $("#" + badgeId).text(monthCount);
   }
@@ -42,6 +38,7 @@ $(document).ready(function () {
   grayOutOldEvents();
 
   // Call the function for November (targetMonth = '11') and December (targetMonth = '12')
-  updateMonthBadge("november-badge", "11"); // November
-  updateMonthBadge("december-badge", "12"); // December
+  updateMonthBadge("november-badge", "11");
+  updateMonthBadge("december-badge", "12");
+  updateMonthBadge("may-badge", "05");
 });

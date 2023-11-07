@@ -54,6 +54,30 @@ bash converter.sh
 
 This will convert all the `.jpg` files into `.webp`. Remember to remove the jpg files before committing your changes.
 
+### Cropping the image maintaining the aspect ratio
+
+Sometimes photos don't look exactly the same size so some elements get distorted.
+
+Install image magick:
+
+```bash
+brew install imagemagick
+```
+
+First check the size of the image.
+
+```bash
+file <image_file>
+```
+
+Edit the file `cropper.sh` with the size of the image you want to have and then run:
+
+```
+bash cropper.sh <image_file>
+```
+
+It'll be stored in [docs/assets/](docs/assets/) with a `-crop` suffix.
+
 ## Testing Locally Using Python's HTTP Server
 
 To test the website locally before deploying changes, you can use Python's built-in HTTP server. Here's how:
