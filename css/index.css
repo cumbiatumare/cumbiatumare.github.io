@@ -35,8 +35,8 @@ h3, h4 {
   .carousel-caption {
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
-  .container-100-in-small-screens {
-    width: 80%
+  .wide-in-small-screens {
+    padding: 10% !important; 
   }
 
 }
