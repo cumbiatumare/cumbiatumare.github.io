@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Cumbia Tu Mare</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Descubrí los vibrantes ritmos de América Latina con Cumbia Tu Mare ¡Vení a vernos en vivo, conocenos y explora nuestra música!">
+  <meta name="description"
+    content="Descubrí los vibrantes ritmos de América Latina con Cumbia Tu Mare ¡Vení a vernos en vivo, conocenos y explora nuestra música!">
   <link rel="icon" href="docs/assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css">
@@ -26,290 +28,296 @@
   <script src="js/jquery.i18n.emitter.bidi.js"></script>
 
   <script src="js/translations.js"></script>
+  <script src="js/index.js"></script>
 </head>
+
 <body id="site" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#site">CUMBIA TU MARE</a>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#site">CUMBIA TU MARE</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#site" data-i18n="nav-link-home">INICIO</a></li>
+          <li><a href="#band" data-i18n="nav-link-band">LA BANDA</a></li>
+          <li><a href="#tour" data-i18n="nav-link-dates">FECHAS</a></li>
+          <li><a href="#contact" data-i18n="nav-link-contact">CONTACTO</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" onclick="set_locale_to('en')">English</a></li>
+              <li><a href="#" onclick="set_locale_to('es')">Español</a></li>
+              <li><a href="#" onclick="set_locale_to('de')">Deutsch</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#site" data-i18n="nav-link-home">INICIO</a></li>
-        <li><a href="#band" data-i18n="nav-link-band">LA BANDA</a></li>
-        <li><a href="#tour" data-i18n="nav-link-dates">FECHAS</a></li>
-        <li><a href="#contact" data-i18n="nav-link-contact">CONTACTO</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#" onclick="set_locale_to('en')">English</a></li>
-            <li><a href="#" onclick="set_locale_to('es')">Español</a></li>
-            <li><a href="#" onclick="set_locale_to('de')">Deutsch</a></li>
-          </ul>
-        </li>
+  </nav>
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="docs/assets/foto_wiese2.webp" alt="The band members walking around on a meadow" width="1200"
+          height="700">
+        <div class="carousel-caption">
+          <h3>Cumbia Tu Mare</h3>
+          <p data-i18n="carousel-description-1"></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="docs/assets/foto1.webp" alt="Edgar singing on a rooftop" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Cumbia Tu Mare</h3>
+          <p data-i18n="carousel-description-2"></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="docs/assets/foto2.webp" alt="Edgar and Juani playing on a rooftop" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Cumbia Tu Mare</h3>
+          <p data-i18n="carousel-description-3"></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="docs/assets/foto3.webp" alt="Edgar shaking his maracas with Mauricio and the public in the background"
+          width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Cumbia Tu Mare</h3>
+          <p data-i18n="carousel-description-4"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Container (The Band Section) -->
+  <div id="band" class="container text-center">
+    <h1>CUMBIA TU MARE</h1>
+    <p data-i18n="band-intro">Formada en el año 2022, Cumbia Tu Mare nació de la unión de varios amigos latinos con una
+      pasión compartida por la música. Desde entonces, hemos recorrido un emocionante camino, atrayendo talentosos
+      músicos de diversas nacionalidades y creando una combinación única de estilos y sabores musicales.</p>
+    <p data-i18n="band-intro-1">Haciendo click en nuestros nombres podés descubrir un poco más sobre nosotros.</p>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <h2 class="text-center" data-i18n="band-member-edgar-name"><strong>Edgar</strong></h2>
+        <a href="#edgar" data-toggle="collapse">
+          <img src="docs/assets/edgar.webp" class="img-circle person" alt="Edgar's photo" width="255" height="255">
+        </a>
+        <div id="edgar" class="collapse">
+          <p data-i18n="band-member-edgar-role">Percusionista y Vocalista</p>
+          <p data-i18n="band-member-edgar-description">El que todo lo puede</p>
+          <h3>🇨🇴</h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h2 class="text-center" data-i18n="band-member-mauricio-name"><strong>Mauricio</strong></h2>
+        <a href="#mauricio" data-toggle="collapse">
+          <img src="docs/assets/mauricio.webp" class="img-circle person" alt="Mauricio's photo" width="255"
+            height="255">
+        </a>
+        <div id="mauricio" class="collapse">
+          <p data-i18n="band-member-mauricio-role">Guitarrista y Vocalista</p>
+          <p data-i18n="band-member-mauricio-description">El chileno ql</p>
+          <h3>🇨🇱</h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h2 class="text-center" data-i18n="band-member-juani-name"><strong>Juani</strong></h2>
+        <a href="#juani" data-toggle="collapse">
+          <img src="docs/assets/juani.webp" class="img-circle person" alt="Juani's photo" width="255" height="255">
+        </a>
+        <div id="juani" class="collapse">
+          <p data-i18n="band-member-juani-role">Bajista</p>
+          <p data-i18n="band-member-juani-description">Aguante el Diego</p>
+          <h3>🇦🇷</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h2 class="text-center" data-i18n="band-member-saul-name"><strong>Saúl</strong></h2>
+        <a href="#saul" data-toggle="collapse">
+          <img src="docs/assets/saul.webp" class="img-circle person" alt="Saúl's photo" width="255" height="255">
+        </a>
+        <div id="saul" class="collapse">
+          <p data-i18n="band-member-saul-role">Guitarrista y violinista</p>
+          <p data-i18n="band-member-saul-description">El que tira magia en las cuerdas</p>
+          <h3>🇪🇨</h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h2 class="text-center" data-i18n="band-member-lucho-name"><strong>Lucho</strong></h2>
+        <a href="#lucho" data-toggle="collapse">
+          <img src="docs/assets/lucho.webp" class="img-circle person" alt="Lucho's photo" width="255" height="255">
+        </a>
+        <div id="lucho" class="collapse">
+          <p data-i18n="band-member-lucho-role">Percusionista</p>
+          <p data-i18n="band-member-lucho-description">El que hace cantar a las congas</p>
+          <h3>🇳🇮</h3>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h2 class="text-center" data-i18n="band-member-martin-name"><strong>Martin</strong></h2>
+        <a href="#martin" data-toggle="collapse">
+          <img src="docs/assets/martin.webp" class="img-circle person" alt="Martin's photo" width="255" height="255">
+        </a>
+        <div id="martin" class="collapse">
+          <p data-i18n="band-member-martin-role">Baterista</p>
+          <p data-i18n="band-member-martin-description">El metrónomo de la banda</p>
+          <h3>🇩🇪</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <h2 class="text-center" data-i18n="band-member-simon-name"><strong>Simon</strong></h2>
+        <a href="#simon" data-toggle="collapse">
+          <img src="docs/assets/simon.webp" class="img-circle person" alt="Simon's photo" width="255" height="255">
+        </a>
+        <div id="simon" class="collapse">
+          <p data-i18n="band-member-simon-role">Tecladista</p>
+          <p data-i18n="band-member-simon-description">El que le pone el piripipí a la melodía</p>
+          <h3>🇩🇪</h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Container (TOUR Section) -->
+  <div id="tour" class="bg-1">
+    <div class="container">
+      <h2 class="text-center" data-i18n="nav-link-dates">FECHAS</h2>
+      <p class="text-center" data-i18n="tour-cta">¡Vení a vernos en vivo!</p>
+      <ul class="list-group">
+        <li class="list-group-item"><span data-i18n="november">Noviembre</span><span class="badge"
+            id="november-badge"></span></li>
+        <li class="list-group-item"><span data-i18n="december">Diciembre</span><span class="badge"
+            id="december-badge"></span></li>
       </ul>
-    </div>
-  </div>
-</nav>
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="docs/assets/foto_wiese2.webp" alt="The band members walking around on a meadow" width="1200" height="700">
-      <div class="carousel-caption">
-        <h3>Cumbia Tu Mare</h3>
-        <p data-i18n="carousel-description-1"></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="docs/assets/foto1.webp" alt="Edgar singing on a rooftop" width="1200" height="700">
-      <div class="carousel-caption">
-        <h3>Cumbia Tu Mare</h3>
-        <p data-i18n="carousel-description-2"></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="docs/assets/foto2.webp" alt="Edgar and Juani playing on a rooftop" width="1200" height="700">
-      <div class="carousel-caption">
-        <h3>Cumbia Tu Mare</h3>
-        <p data-i18n="carousel-description-3"></p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="docs/assets/foto3.webp" alt="Edgar shaking his maracas with Mauricio and the public in the background" width="1200" height="700">
-      <div class="carousel-caption">
-        <h3>Cumbia Tu Mare</h3>
-        <p data-i18n="carousel-description-4"></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
 
 
-<!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
-  <h1>CUMBIA TU MARE</h1>
-  <p data-i18n="band-intro">Formada en el año 2022, Cumbia Tu Mare nació de la unión de varios amigos latinos con una pasión compartida por la música. Desde entonces, hemos recorrido un emocionante camino, atrayendo talentosos músicos de diversas nacionalidades y creando una combinación única de estilos y sabores musicales.</p>
-  <p data-i18n="band-intro-1">Haciendo click en nuestros nombres podés descubrir un poco más sobre nosotros.</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <h2 class="text-center" data-i18n="band-member-edgar-name"><strong>Edgar</strong></h2>
-      <a href="#edgar" data-toggle="collapse">
-        <img src="docs/assets/edgar.webp" class="img-circle person" alt="Edgar's photo" width="255" height="255">
-      </a>
-      <div id="edgar" class="collapse">
-        <p data-i18n="band-member-edgar-role">Percusionista y Vocalista</p>
-        <p data-i18n="band-member-edgar-description">El que todo lo puede</p>
-        <h3>🇨🇴</h3>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <h2 class="text-center" data-i18n="band-member-mauricio-name"><strong>Mauricio</strong></h2>
-      <a href="#mauricio" data-toggle="collapse">
-        <img src="docs/assets/mauricio.webp" class="img-circle person" alt="Mauricio's photo" width="255" height="255">
-      </a>
-      <div id="mauricio" class="collapse">
-        <p data-i18n="band-member-mauricio-role">Guitarrista y Vocalista</p>
-        <p data-i18n="band-member-mauricio-description">El chileno ql</p>
-        <h3>🇨🇱</h3>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <h2 class="text-center" data-i18n="band-member-juani-name"><strong>Juani</strong></h2>
-      <a href="#juani" data-toggle="collapse">
-        <img src="docs/assets/juani.webp" class="img-circle person" alt="Juani's photo" width="255" height="255">
-      </a>
-      <div id="juani" class="collapse">
-        <p data-i18n="band-member-juani-role">Bajista</p>
-        <p data-i18n="band-member-juani-description">Aguante el Diego</p>
-        <h3>🇦🇷</h3>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <h2 class="text-center" data-i18n="band-member-saul-name"><strong>Saúl</strong></h2>
-      <a href="#saul" data-toggle="collapse">
-        <img src="docs/assets/saul.webp" class="img-circle person" alt="Saúl's photo" width="255" height="255">
-      </a>
-      <div id="saul" class="collapse">
-        <p data-i18n="band-member-saul-role">Guitarrista y violinista</p>
-        <p data-i18n="band-member-saul-description">El que tira magia en las cuerdas</p>
-        <h3>🇪🇨</h3>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <h2 class="text-center" data-i18n="band-member-lucho-name"><strong>Lucho</strong></h2>
-      <a href="#lucho" data-toggle="collapse">
-        <img src="docs/assets/lucho.webp" class="img-circle person" alt="Lucho's photo" width="255" height="255">
-      </a>
-      <div id="lucho" class="collapse">
-        <p data-i18n="band-member-lucho-role">Percusionista</p>
-        <p data-i18n="band-member-lucho-description">El que hace cantar a las congas</p>
-        <h3>🇳🇮</h3>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <h2 class="text-center" data-i18n="band-member-martin-name"><strong>Martin</strong></h2>
-      <a href="#martin" data-toggle="collapse">
-        <img src="docs/assets/martin.webp" class="img-circle person" alt="Martin's photo" width="255" height="255">
-      </a>
-      <div id="martin" class="collapse">
-        <p data-i18n="band-member-martin-role">Baterista</p>
-        <p data-i18n="band-member-martin-description">El metrónomo de la banda</p>
-        <h3>🇩🇪</h3>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-      <h2 class="text-center" data-i18n="band-member-simon-name"><strong>Simon</strong></h2>
-      <a href="#simon" data-toggle="collapse">
-        <img src="docs/assets/simon.webp" class="img-circle person" alt="Simon's photo" width="255" height="255">
-      </a>
-      <div id="simon" class="collapse">
-        <p data-i18n="band-member-simon-role">Tecladista</p>
-        <p data-i18n="band-member-simon-description">El que le pone el piripipí a la melodía</p>
-        <h3>🇩🇪</h3>
-      </div>
-    </div>
-  </div>
-  
-</div>
-
-<!-- Container (TOUR Section) -->
-<div id="tour" class="bg-1">
-  <div class="container">
-    <h2 class="text-center" data-i18n="nav-link-dates">FECHAS</h2>
-    <p class="text-center" data-i18n="tour-cta">¡Vení a vernos en vivo!</p>
-    <ul class="list-group">
-      <li class="list-group-item"><span data-i18n="november">Noviembre</span><span class="badge">3</span></li>
-      <li class="list-group-item"><span data-i18n="december">Diciembre</span><span class="badge">1</span></li> 
-    </ul>
-    
-    <div class="row text-center">
-      <div class="col-md-4 col-sm-12">
-        <div class="thumbnail">
-          <img src="docs/assets/foto_albertshofen_1.webp" alt="Promotional photo for La Lucha" width="400" height="300">
-          <p><strong data-i18n="tour-date-1-location">Spardorf</strong></p>
-          <p data-i18n="tour-date-1-event">Taquería La Lucha</p>
-          <p data-i18n="tour-date-1-date">Jueves 02.11</p>
+      <div class="row text-center">
+        <div class="col-md-4 col-sm-12">
+          <div class="thumbnail tour-date" data-event-date="2023-11-02">
+            <img src="docs/assets/foto_albertshofen_1.webp" alt="Promotional photo for La Lucha">
+            <p><strong data-i18n="tour-date-1-location">Spardorf</strong></p>
+            <p data-i18n="tour-date-1-event">Taquería La Lucha</p>
+            <p data-i18n="tour-date-1-date">Jueves 02.11</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="thumbnail tour-date" data-event-date="2023-11-03">
+            <img src="docs/assets/foto_albertshofen_2.webp" alt="Promotional photo for a private birthday party">
+            <p><strong data-i18n="tour-date-2-location">Bamberg</strong></p>
+            <p data-i18n="tour-date-2-event">Fiesta de cumpleaños privada</p>
+            <p data-i18n="tour-date-2-date">Viernes 03.11</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="thumbnail tour-date" data-event-date="2023-12-01">
+            <img src="docs/assets/kings_arms_1.webp" alt="Promotional photo for King's Arms">
+            <p><strong data-i18n="tour-date-4-location">Nürnberg</strong></p>
+            <p data-i-18n="tour-date-4-event">King's Arms Pub</p>
+            <p data-i18n="tour-date-4-date">Viernes 01.12</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="thumbnail">
-          <img src="docs/assets/foto_albertshofen_2.webp" alt="Promotional photo for a private birthday party" width="400" height="300">
-          <p><strong data-i18n="tour-date-2-location">Bamberg</strong></p>
-          <p data-i18n="tour-date-2-event">Fiesta de cumpleaños privada</p>
-          <p data-i18n="tour-date-2-date">Viernes 03.11</p>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="thumbnail">
-          <img src="docs/assets/foto_wiese3.webp" alt="Promotional photo for a private tour date in Puma, Herzogenaurach" width="400" height="300">
-          <p><strong data-i18n="tour-date-3-location">Herzogenaurach</strong></p>
-          <p data-i18n="tour-date-3-event">Fiesta privada en Puma</p>
-          <p data-i18n="tour-date-3-date">Jueves 09.11</p>
-        </div>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-4 col-sm-12">
-        <div class="thumbnail">
-          <img src="docs/assets/kings_arms_1.webp" alt="Promotional photo for King's Arms" width="400" height="300">
-          <p><strong data-i18n="tour-date-4-location">Nürnberg</strong></p>
-          <p data-i18n="tour-date-4-event">King's Arms Pub</p>
-          <p data-i18n="tour-date-4-date">Viernes 01.12</p>
-        </div>
-        </div>
-      </div>
-    </div>  
-  </div>
-</div> 
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container">
-  <h2 class="text-center" data-i18n="nav-link-contact">Contacto</h2>
-  <p class="text-center" data-i18n="contact-intro"><em>¿Querés que toquemos en tu fiesta? ¿Tenés alguna pregunta?</em></p>
-
-  <div class="row">
-    <div class="col-md-6">
-      <p><span class="glyphicon glyphicon-map-marker"></span>Erlangen, Bayern</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> info (arroba) cumbiatuma (punto) re</p>
-      <p><i class="fa fa-instagram w3-hover-opacity"></i> <a href="https://www.instagram.com/cumbiatumare/">cumbiatumare</p>
     </div>
   </div>
-</div>
 
-<img src="docs/assets/footer.webp" class="img-responsive" style="width:100%" alt="Black and white photo of Cumbia Tu Mare playing on a rooftop with fans in the foreground">
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container">
+    <h2 class="text-center" data-i18n="nav-link-contact">Contacto</h2>
+    <p class="text-center" data-i18n="contact-intro"><em>¿Querés que toquemos en tu fiesta? ¿Tenés alguna pregunta?</em>
+    </p>
 
-<!-- Footer -->
-<footer class="text-center">
-  <a class="up-arrow" href="#site" data-toggle="tooltip" title="HOME">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>Made with <i class="glyphicon glyphicon-heart"></i> by Juani and ChatGPT using a template from <a href="https://www.w3schools.com">w3schools</a></p> 
-</footer>
+    <div class="row">
+      <div class="col-md-6">
+        <p><span class="glyphicon glyphicon-map-marker"></span>Erlangen, Bayern</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> info (arroba) cumbiatuma (punto) re</p>
+        <p><i class="fa fa-instagram w3-hover-opacity"></i> <a
+            href="https://www.instagram.com/cumbiatumare/">cumbiatumare</p>
+      </div>
+    </div>
+  </div>
 
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#site']").on('click', function(event) {
+  <img src="docs/assets/footer.webp" class="img-responsive" style="width:100%"
+    alt="Black and white photo of Cumbia Tu Mare playing on a rooftop with fans in the foreground">
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+  <!-- Footer -->
+  <footer class="text-center">
+    <a class="up-arrow" href="#site" data-toggle="tooltip" title="HOME">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>Made with <i class="glyphicon glyphicon-heart"></i> by Juani and ChatGPT using a template from <a
+        href="https://www.w3schools.com">w3schools</a></p>
+  </footer>
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
+  <script>
+    $(document).ready(function () {
+      // Initialize Tooltip
+      $('[data-toggle="tooltip"]').tooltip();
 
-      // Store hash
-      var hash = this.hash;
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#site']").on('click', function (event) {
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
       });
-    } // End if
-  });
-})
-</script>
+    })
+  </script>
 
 </body>
+
 </html>

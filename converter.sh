@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Requires brew install webp
+
 # Specify the directory where your JPG files are located
 jpg_directory="./docs/assets/"
 

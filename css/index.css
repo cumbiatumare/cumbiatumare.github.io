@@ -63,6 +63,10 @@ h3, h4 {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+.thumbnail.grayed {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
 .btn {
   padding: 10px 20px;
   background-color: #333;
