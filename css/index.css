@@ -1,6 +1,19 @@
+@font-face {
+  font-family: 'FjallaOne';
+  src: url('fonts/FjallaOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayPenSans';
+  src: url('fonts/PlaypenSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-    font: 400 15px/1.8 Lato, sans-serif;
+    font: 400 15px/1.8 FjallaOne, sans-serif;
     color: #777;
   }
 h3, h4 {
@@ -102,7 +115,7 @@ h3, h4 {
   filter: grayscale(100%);
 }  
 .navbar {
-  font-family: Montserrat, sans-serif;
+  font-family: PlayPenSans, cursive;
   margin-bottom: 0;
   background-color: #2d2d30;
   border: 0;
