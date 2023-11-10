@@ -14,3 +14,6 @@ var set_locale_to = function (locale) {
   }
   $("body").i18n();
 };
+
+var userLang = navigator.language || navigator.userLanguage || "es";
+set_locale_to(userLang);
