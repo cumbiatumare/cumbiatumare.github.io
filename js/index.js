@@ -1,7 +1,15 @@
 $(document).ready(function () {
-  // Close the navbar on click
+  // Close navbar collapse when a link inside navbar-nav is clicked
   $(".navbar-nav li a:not('.dropdown-toggle')").on("click", function () {
     $(".navbar-collapse").collapse("hide");
+  });
+
+  // Close navbar collapse when anything else on the screen is clicked
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest(".navbar-collapse").length) {
+      // Clicked outside of the navbar, so hide it
+      $(".navbar-collapse").collapse("hide");
+    }
   });
 
   function grayOutOldEvents() {
