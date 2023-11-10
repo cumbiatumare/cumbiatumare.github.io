@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  // Close the navbar on click
+  $(".navbar-nav li a:not('.dropdown-toggle')").on("click", function () {
+    $(".navbar-collapse").collapse("hide");
+  });
+
   function grayOutOldEvents() {
     // Get today's date in the format "YYYY-MM-DD"
     var today = new Date();
