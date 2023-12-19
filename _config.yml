@@ -1,0 +1,4 @@
+exclude:
+  - converter.sh
+  - cropper.sh
+  - README.md
