@@ -50,8 +50,12 @@ $(document).ready(function () {
 
   grayOutOldEvents();
 
-  // Call the function for November (targetMonth = '11') and December (targetMonth = '12')
+  // Call the function for each month
   updateMonthBadge("november-badge", "11");
   updateMonthBadge("december-badge", "12");
+  updateMonthBadge("january-badge", "01");
+  updateMonthBadge("february-badge", "02");
+  updateMonthBadge("march-badge", "03");
+  updateMonthBadge("april-badge", "04");
   updateMonthBadge("may-badge", "05");
 });
