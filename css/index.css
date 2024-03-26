@@ -253,7 +253,7 @@ textarea {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg);
+    transform: rotate(22deg);
   }
 }
 
@@ -268,7 +268,7 @@ textarea {
 .logo-overlay img {
   width: 200px;
   height: auto;
-  animation: rotate 20s linear infinite;
+  animation: rotate 5s linear infinite alternate;
 } 
 
 @media (max-width: 1024px) {
