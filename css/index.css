@@ -285,12 +285,12 @@ textarea {
 
 @media (max-width: 768px) {
   .logo-overlay {
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
   }
 
   .logo-overlay img {
-    width: 50px;
+    width: 70px;
   }
 }
 
