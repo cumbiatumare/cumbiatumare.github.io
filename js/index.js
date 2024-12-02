@@ -31,6 +31,10 @@ $(document).ready(function () {
     });
   }
 
+  // Get the current year for the Copyright Notice
+  const currentYear = new Date().getFullYear();
+  $("#currentYear").text(currentYear);
+
   function updateMonthBadge(badgeId, targetMonth) {
     // Select the tour date elements with the "tour-date" class
     var tourDateElements = $(".tour-date");
