@@ -14,7 +14,7 @@ This will involve removing old dates and creating new ones, and then updating th
 
 We use the i18n (internationalization) library to manage translations for different languages. Follow these steps to add translations:
 
-**Access Language Files**: in [docs/translations](docs/translations/), you'll find language files for different languages (e.g., `en.json`` for English). Inside these files, you'll see keys and their corresponding translations. For example:
+**Access Language Files**: in [docs/translations](docs/translations/), you'll find language files for different languages (e.g., `en.json` for English). Inside these files, you'll see keys and their corresponding translations. For example:
 
 ```json
 {

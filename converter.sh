@@ -2,20 +2,27 @@
 
 # Requires brew install webp
 
-# Specify the directory where your JPG files are located
-jpg_directory="./docs/assets/"
+convert_to_webp() {
+    local input_directory="$1"
+    local file_extension="$2"
 
-# Specify the directory to store the WebP files 
-webp_directory="./docs/assets/"
+    echo "----------------------------------------------------------------"
+    echo "Converting all $file_extension files in $input_directory to webp..."
 
-# Loop through the JPG files and convert them to WebP
-for jpg_file in "$jpg_directory"*.jpg; do
-    filename=$(basename -- "$jpg_file")
-    filename_noext="${filename%.*}"
-    webp_file="$webp_directory${filename_noext}.webp"
+    for file in "$input_directory"*."$file_extension"; do
+        [ -e "$file" ] || continue  # Skip if no files match the pattern
+        filename=$(basename -- "$file")
+        filename_noext="${filename%.*}"
+        webp_file="$input_directory${filename_noext}.webp"
 
-    # Convert the JPG to WebP using cwebp
-    cwebp "$jpg_file" -o "$webp_file"
+        # Convert the file to WebP using cwebp
+        cwebp "$file" -o "$webp_file"
 
-    echo "Converted: $jpg_file to $webp_file"
-done
+        echo "Converted: $file to $webp_file"
+    done
+}
+
+assets_directory="./docs/assets/"
+
+convert_to_webp "$assets_directory" "jpg"
+convert_to_webp "$assets_directory" "png"
