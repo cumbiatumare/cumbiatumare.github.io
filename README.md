@@ -54,6 +54,15 @@ bash converter.sh
 
 This will convert all the `.jpg` files into `.webp`. Remember to remove the jpg files before committing your changes.
 
+### Decreasing image size even more
+
+You can use `cwebp` to decrease the quality of the photo a bit, which is barely noticeable but it'll decrease the image size.
+Try playing with the `-q` parameter from 1 to 100.
+
+```bash
+cwebp photo.webp -q 70 -o compressed_photo.webp
+```
+
 ### Cropping the image maintaining the aspect ratio
 
 Sometimes photos don't look exactly the same size so some elements get distorted.
