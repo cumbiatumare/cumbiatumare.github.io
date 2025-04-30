@@ -48,6 +48,10 @@ $(document).ready(function () {
 
     // Update the badge number
     $("#" + badgeId).text(monthCount);
+    // Make the ones with at least one event red
+    if (monthCount > 0) {
+      $("#" + badgeId).css("background-color", "#00b876");
+    }
   }
 
   // Function calls

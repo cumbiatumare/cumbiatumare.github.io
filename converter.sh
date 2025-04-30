@@ -25,4 +25,5 @@ convert_to_webp() {
 assets_directory="./docs/assets/"
 
 convert_to_webp "$assets_directory" "jpg"
+convert_to_webp "$assets_directory" "jpeg"
 convert_to_webp "$assets_directory" "png"

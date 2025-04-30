@@ -6,5 +6,5 @@ filename_noext="${filename%.*}"
 
 webp_directory="./docs/assets/"
 
-convert "$webp_file" -resize 2048x1366^ -gravity center \
--extent 2048x1366 "$webp_directory${filename_noext}-crop.webp"
+magick "$webp_file" -resize 1200x1366^ -gravity center \
+-extent 1200x1366 "$webp_directory${filename_noext}-crop.webp"
