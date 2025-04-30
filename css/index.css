@@ -235,6 +235,22 @@ textarea {
   resize: none;
 }
 
+.contact-left,
+.contact-right {
+  text-align: center; /* Default for xs */
+}
+
+/* For >= 768px (Bootstrap's md breakpoint) */
+@media (min-width: 768px) {
+  .contact-left {
+    text-align: left;
+  }
+
+  .contact-right {
+    text-align: right;
+  }
+}
+
 /* Rotating, overlayed logo */
 
 @keyframes rotate {
