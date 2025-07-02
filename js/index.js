@@ -20,8 +20,8 @@ $(document).ready(function () {
     var yyyy = today.getFullYear();
     today = yyyy + "-" + mm + "-" + dd;
 
-    // Iterate through the card elements with the "tour-date" class
-    $(".tour-date").each(function () {
+    // Iterate through the card elements with the "tour-card" class
+    $(".tour-card").each(function () {
       var eventDate = $(this).data("event-date");
 
       if (eventDate < today) {
@@ -36,8 +36,8 @@ $(document).ready(function () {
   $("#currentYear").text(currentYear);
 
   function updateMonthBadge(badgeId, targetMonth) {
-    // Select the tour date elements with the "tour-date" class
-    var tourDateElements = $(".tour-date");
+    // Select the tour date elements with the "tour-card" class
+    var tourDateElements = $(".tour-card");
 
     // Calculate the number of tour dates for the given month
     var monthCount = tourDateElements.filter(function () {

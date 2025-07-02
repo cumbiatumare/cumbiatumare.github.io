@@ -87,10 +87,6 @@ h4 {
   color: #000;
 }
 
-.bg-1 p {
-  font-style: italic;
-}
-
 .custom-navbar .language-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -154,6 +150,50 @@ h4 {
 .thumbnail.grayed {
   filter: grayscale(100%);
   opacity: 0.7;
+}
+
+.tour-card {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+  color: #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+  text-align: center;
+  backdrop-filter: blur(6px); /* optional: nice glassy blur */
+}
+
+.tour-card:hover {
+  transform: scale(1.02);
+}
+
+.tour-card .tour-location {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.tour-card .tour-name {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.tour-card .tour-date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00; /* bright yellow-gold for visibility */
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+.tour-card a {
+  color: #f4ee55; /* bright yellow for links */
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .btn {
