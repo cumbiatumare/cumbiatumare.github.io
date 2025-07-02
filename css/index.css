@@ -91,16 +91,34 @@ h4 {
   font-style: italic;
 }
 
-.dropdown-menu {
+.custom-navbar .language-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: auto;
+  right: 0;
+  margin-top: 0;
+  min-width: 120px;
   background-color: #333;
   border: 1px solid #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  list-style: none;
+  padding-left: 0;
+  display: none;
 }
 
-.dropdown-menu li a {
+/* Show the dropdown menu when the parent is open */
+.custom-navbar .dropdown.open .language-dropdown-menu {
+  display: block;
+}
+
+.custom-navbar .language-dropdown-menu > li > a {
+  font-size: 12px;
+  padding: 8px 12px;
   color: #ddd !important;
 }
 
-.dropdown-menu li a:hover {
+.custom-navbar .language-dropdown-menu > li > a:hover {
   background-color: #555 !important;
   color: #fff !important;
 }
@@ -179,6 +197,7 @@ h4,
   font-size: 11px !important;
   letter-spacing: 4px;
   opacity: 0.9;
+  overflow: visible;
 }
 
 .navbar li a,
@@ -204,11 +223,11 @@ h4,
   background-color: #555 !important;
 }
 
-.dropdown-menu li a {
+.language-dropdown-menu li a {
   color: #ddd !important;
 }
 
-.dropdown-menu li a:hover {
+.language-dropdown-menu li a:hover {
   background-color: red !important;
 }
 
@@ -294,5 +313,52 @@ textarea {
 
   .logo-overlay img {
     width: 70px;
+  }
+
+  #band.container {
+    max-width: 70% !important;
+    width: 70% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #event-counter-list {
+    display: none;
+  }
+
+  body {
+    padding-top: 50px; /* Prevent navbar from covering carousel */
+  }
+
+  /* Custom styles for the navbar on smaller screens */
+
+  .custom-navbar {
+    background-color: #222;
+  }
+
+  .custom-navbar .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .custom-navbar .navbar-nav {
+    margin: 0;
+    float: none !important;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .custom-navbar .navbar-nav > li {
+    float: none;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .custom-navbar .nav > li > a {
+    padding: 10px 6px;
+    font-size: 12px;
+    color: white !important;
   }
 }

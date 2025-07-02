@@ -5,7 +5,7 @@
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>Cumbia Tu Mare</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
     content="Descubrí los vibrantes ritmos de América Latina con Cumbia Tu Mare ¡Vení a vernos en vivo, conocenos y explora nuestra música!">
   <link rel="icon" href="docs/assets/favicon/favicon.ico" type="image/x-icon">
@@ -33,26 +33,22 @@
 
 <body id="site" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top custom-navbar">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#site">CUMBIA TU MARE</a>
+        <a class="navbar-brand hidden-xs" href="#site">CUMBIA TU MARE</a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#site" data-i18n="nav-link-home">INICIO</a></li>
+          <!-- <li><a href="" data-i18n="nav-link-home">INICIO</a></li> -->
           <li><a href="#band" data-i18n="nav-link-band">LA BANDA</a></li>
           <li><a href="#tour" data-i18n="nav-link-dates">FECHAS</a></li>
           <li><a href="#contact" data-i18n="nav-link-contact">CONTACTO</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe"></i><span
-                class="caret"></span></a>
-            <ul class="dropdown-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-globe"></i><span class="caret"></span>
+            </a>
+            <ul class="language-dropdown-menu">
               <li><a href="" onclick="set_locale_to('en'); return false">English</a></li>
               <li><a href="" onclick="set_locale_to('es'); return false">Español</a></li>
               <li><a href="" onclick="set_locale_to('de'); return false">Deutsch</a></li>
@@ -247,7 +243,7 @@
     <div class="container wide-in-small-screens">
       <h2 class="text-center" data-i18n="nav-link-dates">FECHAS</h2>
       <p class="text-center" data-i18n="tour-cta">¡Vení a vernos en vivo!</p>
-      <ul class="list-group">
+      <ul id="event-counter-list" class="list-group">
         <!-- <li class="list-group-item"><span data-i18n="january">January</span><span class="badge"
             id="january-badge"></span>
         </li>
@@ -356,9 +352,9 @@
             <a href="https://www.instagram.com/cumbiatumare/">Instagram</a>&nbsp;<i
               class="fa fa-instagram w3-hover-opacity"></i>
           </p>
-          <p>
+          <!-- <p>
             <a href="https://vimeo.com/cumbiatumare">Vimeo</a>&nbsp;<i class="fa fa-vimeo w3-hover-opacity"></i>
-          </p>
+          </p> -->
           <p>
             <a href="https://www.youtube.com/@CumbiaTuMare-Oficial">YouTube</a>&nbsp;<i
               class="fa fa-youtube w3-hover-opacity"></i>
@@ -367,11 +363,11 @@
             <a href="https://whatsapp.com/channel/0029VbAd4RSLY6d3rtmoqE2g">WhatsApp Channel</a>&nbsp;<i
               class="fa fa-whatsapp w3-hover-opacity"></i>
           </p>
-          <p>
+          <!-- <p>
             <a href="https://www.latinotopia.net/programa/cumbia-tu-mare-empapando-de-cumbia-a-franconia/"
               data-i18n="radio-z-interview">Entrevista en Latinotopía</a>&nbsp;<i
               class="fa fa-comment w3-hover-opacity"></i>
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
