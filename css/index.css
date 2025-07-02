@@ -161,7 +161,7 @@ h4 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease;
   text-align: center;
-  backdrop-filter: blur(6px); /* optional: nice glassy blur */
+  backdrop-filter: blur(2px); /* optional: nice glassy blur */
 }
 
 .tour-card:hover {
@@ -185,13 +185,13 @@ h4 {
 .tour-card .tour-date {
   font-size: 20px;
   font-weight: bold;
-  color: #ffcc00; /* bright yellow-gold for visibility */
+  color: #f4ee55;
   margin-top: 12px;
   letter-spacing: 0.5px;
 }
 
 .tour-card a {
-  color: #f4ee55; /* bright yellow for links */
+  color: #f4ee55;
   text-decoration: none;
   font-weight: bold;
 }
