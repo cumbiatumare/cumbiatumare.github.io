@@ -12,28 +12,22 @@ $(document).ready(function () {
     }
   });
 
-  function grayOutOldEvents() {
-    // Get today's date in the format "YYYY-MM-DD"
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, "0");
-    var mm = String(today.getMonth() + 1).padStart(2, "0"); // January is 0!
-    var yyyy = today.getFullYear();
-    today = yyyy + "-" + mm + "-" + dd;
+  // Get the current year for the Copyright Notice
+  const currentYear = new Date().getFullYear();
+  $("#currentYear").text(currentYear);
 
-    // Iterate through the card elements with the "tour-card" class
+  function grayOutOldEvents() {
+    const today = new Date();
+
     $(".tour-card").each(function () {
-      var eventDate = $(this).data("event-date");
+      const eventDateStr = $(this).data("event-date");
+      const eventDate = new Date(eventDateStr);
 
       if (eventDate < today) {
-        // Add a class to gray out the card
         $(this).addClass("grayed");
       }
     });
   }
-
-  // Get the current year for the Copyright Notice
-  const currentYear = new Date().getFullYear();
-  $("#currentYear").text(currentYear);
 
   function updateMonthBadge(badgeId, targetMonth) {
     // Select the tour date elements with the "tour-card" class
@@ -71,4 +65,13 @@ $(document).ready(function () {
   updateMonthBadge("october-badge", "10");
   updateMonthBadge("november-badge", "11");
   updateMonthBadge("december-badge", "12");
+
+  // Because why not?
+  console.log(`
+  ___           _    _        _____       __  __              
+ / __|  _ _ __ | |__(_)__ _  |_   _|  _  |  \\/  |__ _ _ _ ___ 
+| (_| || | '  \\| '_ \\ / _\` |   | || || | | |\\/| / _\` | '_/ -_)
+ \\___\\_,_|_|_|_|_.__/_\\__,_|   |_| \\_,_| |_|  |_\\__,_|_| \\___|
+                                                            
+`);
 });
