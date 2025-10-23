@@ -1,9 +1,10 @@
 {
   "language-select": "English",
   "navbar-brand": "CTM",
-  "nav-link-home": "HOME",
+  "nav-link-home": "MAIN PAGE",
   "nav-link-band": "BAND",
   "nav-link-dates": "DATES",
+  "nav-link-store": "STORE",
   "nav-link-contact": "CONTACT",
   "band-intro": "Cumbia Tu Mare is a vibrant blend of musicians and rhythms from Colombia, Argentina, Chile, Ecuador, Nicaragua, and Germany. We enjoy experimenting with different musical styles, reinterpreting classics, and composing our own songs. We bring people from diverse backgrounds together, make them dance, and spread the love of Cumbia throughout Germany and the entire world.",
   "band-intro-1": "Click on our pictures to learn more about us.",
