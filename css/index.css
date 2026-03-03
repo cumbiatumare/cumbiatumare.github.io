@@ -78,7 +78,7 @@ h4 {
 
 .bg-1 {
   background: #147ab2;
-  background-image: url(/docs/assets/background.webp);
+  background-image: url("../docs/assets/background.webp");
   background-size: cover;
   background-position: center;
   color: #000;

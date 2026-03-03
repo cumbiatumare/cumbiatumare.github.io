@@ -17,13 +17,14 @@ $(document).ready(function () {
   $("#currentYear").text(currentYear);
 
   function grayOutOldEvents() {
-    const today = new Date();
+    const now = new Date();
 
     $(".tour-card").each(function () {
       const eventDateStr = $(this).data("event-date");
-      const eventDate = new Date(eventDateStr);
+      const [year, month, day] = eventDateStr.split("-").map(Number);
+      const eventDayEnd = new Date(year, month - 1, day, 23, 59, 59, 999);
 
-      if (eventDate < today) {
+      if (now > eventDayEnd) {
         $(this).addClass("grayed");
       }
     });
