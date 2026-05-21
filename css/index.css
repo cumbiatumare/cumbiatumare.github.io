@@ -13,7 +13,9 @@
 }
 
 body {
-  font: 400 15px/1.8 FjallaOne, sans-serif;
+  font:
+    400 15px/1.8 FjallaOne,
+    sans-serif;
   color: #ddd;
   background-color: #222;
   padding-top: 50px; /* Prevent navbar from covering carousel */
@@ -330,7 +332,7 @@ textarea {
 }
 
 .logo-overlay img {
-  width: 200px;
+  width: 160px;
   height: auto;
   animation: rotate 5s linear infinite alternate;
 }
@@ -342,7 +344,7 @@ textarea {
   }
 
   .logo-overlay img {
-    width: 120px;
+    width: 100px;
   }
 }
 
@@ -353,7 +355,7 @@ textarea {
   }
 
   .logo-overlay img {
-    width: 90px;
+    width: 70px;
   }
 
   #band.container {
