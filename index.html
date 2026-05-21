@@ -11,11 +11,10 @@
   <link rel="icon" href="docs/assets/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="docs/assets/favicon/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
 
   <!-- multi-language support -->
@@ -250,8 +249,6 @@
       <h2 class="text-center" data-i18n="nav-link-dates">FECHAS</h2>
       <p class="text-center" data-i18n="tour-cta">¡Vení a vernos en vivo!</p>
       <ul id="event-counter-list" class="list-group">
-        <li class="list-group-item"><span data-i18n="april">Abril</span><span class="badge" id="april-badge"></span>
-        </li>
         <li class="list-group-item"><span data-i18n="may">Mayo</span><span class="badge" id="may-badge"></span></li>
         <li class="list-group-item"><span data-i18n="june">Junio</span><span class="badge" id="june-badge"></span></li>
         <li class="list-group-item"><span data-i18n="july">Julio</span><span class="badge" id="july-badge"></span></li>
@@ -262,27 +259,27 @@
       <!-- First row -->
       <div class="row tour-list">
         <div class="col-md-4 col-sm-12">
-          <div class="tour-card" data-event-date="2026-04-25">
-            <p class="tour-date" data-i18n="tour-date-1-date">SÁBADO 25/04 - 20:30</p>
-            <p class="tour-location" data-i18n="tour-date-1-location"><strong>Nürnberg</strong></p>
-            <p class="tour-name" data-i18n="tour-date-1-event">Anzo Galerie</p>
-            <a href="https://maps.app.goo.gl/bwFN5tsHSQV4pmTa8" data-i18n="tour-date-1-link">Google Maps link</a>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
           <div class="tour-card" data-event-date="2026-05-16">
-            <p class="tour-date" data-i18n="tour-date-2-date">SÁBADO 16/05 - 16:30</p>
-            <p class="tour-location" data-i18n="tour-date-2-location"><strong>Leipzig</strong></p>
-            <p class="tour-name" data-i18n="tour-date-2-event">Cumbiaton Leipzig</p>
-            <a href="https://cumbiaton.de/latin-american-festival" data-i18n="tour-date-2-link">Info</a>
+            <p class="tour-date" data-i18n="tour-date-1-date">SÁBADO 16/05 - 16:30</p>
+            <p class="tour-location" data-i18n="tour-date-1-location"><strong>Leipzig</strong></p>
+            <p class="tour-name" data-i18n="tour-date-1-event">Cumbiaton Leipzig</p>
+            <a href="https://cumbiaton.de/latin-american-festival" data-i18n="tour-date-1-link">Info</a>
           </div>
         </div>
         <div class="col-md-4 col-sm-12">
           <div class="tour-card" data-event-date="2026-05-23">
-            <p class="tour-date" data-i18n="tour-date-3-date">SÁBADO 23/05 - 21:00</p>
-            <p class="tour-location" data-i18n="tour-date-3-location"><strong>Bamberg</strong></p>
-            <p class="tour-name" data-i18n="tour-date-3-event">Kontakt Festival Bamberg</p>
-            <a href="https://kontakt-bamberg.de/" data-i18n="tour-date-3-link">Info</a>
+            <p class="tour-date" data-i18n="tour-date-2-date">SÁBADO 23/05 - 21:00</p>
+            <p class="tour-location" data-i18n="tour-date-2-location"><strong>Bamberg</strong></p>
+            <p class="tour-name" data-i18n="tour-date-2-event">Kontakt Festival Bamberg</p>
+            <a href="https://kontakt-bamberg.de/" data-i18n="tour-date-2-link">Info</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="tour-card" data-event-date="2026-06-13">
+            <p class="tour-date" data-i18n="tour-date-3-date">SÁBADO 13/06 - 20:00</p>
+            <p class="tour-location" data-i18n="tour-date-3-location"><strong>Erlangen</strong></p>
+            <p class="tour-name" data-i18n="tour-date-3-event">25 Jahre EFIE Sommerfest</p>
+            <a href="https://www.e-werk.de/programm/sommerwerk/detail/25-jahre-efie-sommerfest-mit-cumbia-tu-mare-5652/" data-i18n="tour-date-3-link">Info</a>
           </div>
         </div>
       </div>
@@ -366,11 +363,14 @@
     <a class="up-arrow" href="#site" data-toggle="tooltip" title="HOME">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a><br><br>
-    <p><span>Made with <i class="glyphicon glyphicon-heart"></i> by Juani using a template from <a
-          href="https://www.w3schools.com">w3schools</a></p>
-    <p><span>Logo and artwork by the amazing <a href="https://www.instagram.com/destiantos/">Destiantos</a></p>
+    <p><span data-i18n="footer-credit-prefix">Made with</span> <i class="glyphicon glyphicon-heart"></i> <span
+        data-i18n="footer-credit-suffix">by Juani using a template from</span> <a
+        href="https://www.w3schools.com">w3schools</a></p>
+    <p><span data-i18n="footer-artwork-credit">Logo and artwork by the amazing</span> <a
+        href="https://www.instagram.com/destiantos/">Destiantos</a></p>
     <p>
-      <span>© <span id="currentYear"></span> Cumbia Tu Mare GbR. All rights reserved.</span>
+      <span>© <span id="currentYear"></span> Cumbia Tu Mare GbR. <span data-i18n="footer-rights">All rights
+          reserved.</span></span>
     </p>
     <p><a href="./impressum.html" target="_blank">Impressum</a></p>
   </footer>
