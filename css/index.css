@@ -337,6 +337,12 @@ textarea {
   animation: rotate 5s linear infinite alternate;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .logo-overlay img {
+    animation: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .logo-overlay {
     bottom: 30px;
