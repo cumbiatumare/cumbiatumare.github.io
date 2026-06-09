@@ -58,6 +58,24 @@ h4 {
   border-color: #00b876;
 }
 
+#band a[data-toggle="collapse"] {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#band a[data-toggle="collapse"]:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+#band a[data-toggle="collapse"]:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+#band a[data-toggle="collapse"]:focus-visible {
+  box-shadow: 0 0 0 3px #00b876;
+}
+
 .carousel-inner img {
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
