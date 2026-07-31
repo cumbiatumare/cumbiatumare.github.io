@@ -20,7 +20,7 @@ $(document).ready(function () {
     const now = new Date();
 
     $(".tour-card").each(function () {
-      const eventDateStr = $(this).data("event-date");
+      const eventDateStr = $(this).data("event-end-date") || $(this).data("event-date");
       const [year, month, day] = eventDateStr.split("-").map(Number);
       const eventDayEnd = new Date(year, month - 1, day, 23, 59, 59, 999);
 
