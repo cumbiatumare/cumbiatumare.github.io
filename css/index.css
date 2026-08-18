@@ -413,6 +413,17 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  #band > h1 {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    font-size: clamp(2.5rem, 8.6vw, 3.8rem);
+    letter-spacing: 0.02em;
+  }
+
   .logo-overlay {
     bottom: 30px;
     right: 20px;
